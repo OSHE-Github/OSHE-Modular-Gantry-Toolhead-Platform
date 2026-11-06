@@ -1,29 +1,29 @@
 # Mechanical Interface and Toolhead Design
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Interface Plate](#interface-plate)
-   - [Z-Axis Mounting Interface](#z-axis-mounting-interface)
-   - [Mounting Holes and Belt Attachment](#mounting-holes-and-belt-attachment)
-3. [Toolhead Template](#toolhead-template)
-4. [Standardized and Modifiable Geometry](#standardized-and-modifiable-geometry)
-5. [Mounting Hardware](#mounting-hardware)
-6. [Designing a Custom Toolhead](#designing-a-custom-toolhead)
-7. [Clearance and Toolhead Movement](#clearance-and-toolhead-movement)
-8. [Material and Manufacturing](#material-and-manufacturing)
-9. [Example Toolhead: Pen Plotter](#example-toolhead-pen-plotter)
-10. [Electrical Interface](#electrical-interface)
-    - [Electrical Connections and Available Resources](#electrical-connections-and-available-resources)
-    - [Adding Sensors to a Toolhead](#adding-sensors-to-a-toolhead)
-    - [Wiring and Cable Management](#wiring-and-cable-management)
-    - [Toolhead Wiring and Connectors](#toolhead-wiring-and-connectors)
-    - [Electrical Design Considerations](#electrical-design-considerations)
-    - [Electrical Limitations](#electrical-limitations)
-    - [External Power Supplies and Signal Connections](#external-power-supplies-and-signal-connections)
-    - [Motors and Motor Control](#motors-and-motor-control)
-    - [Toolhead Electrical Requirements](#toolhead-electrical-requirements)
 
----
+- [Overview](#overview)
+- [Mechanical Interface](#mechanical-interface)
+  - [Interface Plate](#interface-plate)
+  - [Z-Axis Mounting Interface](#z-axis-mounting-interface)
+  - [Mounting Holes and Belt Attachment](#mounting-holes-and-belt-attachment)
+  - [Toolhead Template](#toolhead-template)
+  - [Standardized and Modifiable Geometry](#standardized-and-modifiable-geometry)
+  - [Mounting Hardware](#mounting-hardware)
+  - [Designing a Custom Toolhead](#designing-a-custom-toolhead)
+  - [Clearance and Toolhead Movement](#clearance-and-toolhead-movement)
+  - [Material and Manufacturing](#material-and-manufacturing)
+  - [Example Toolhead: Pen Plotter](#example-toolhead-pen-plotter)
+- [Electrical Interface](#electrical-interface)
+  - [Electrical Connections and Available Resources](#electrical-connections-and-available-resources)
+  - [Adding Sensors to a Toolhead](#adding-sensors-to-a-toolhead)
+  - [Wiring and Cable Management](#wiring-and-cable-management)
+  - [Toolhead Wiring and Connectors](#toolhead-wiring-and-connectors)
+  - [Electrical Design Considerations](#electrical-design-considerations)
+  - [Electrical Limitations](#electrical-limitations)
+  - [External Power Supplies and Signal Connections](#external-power-supplies-and-signal-connections)
+  - [Motors and Motor Control](#motors-and-motor-control)
+  - [Toolhead Electrical Requirements](#toolhead-electrical-requirements)
 
 ## Overview
 
@@ -37,9 +37,11 @@ This guide provides the dimensions, mounting requirements, electrical connection
 
 The goal is to establish a consistent interface that allows different toolheads to be designed, installed, and exchanged while maintaining compatibility with the existing gantry system.
 
-![Figure 1: Rendering of the OSHE Pick-and-Place machine](images/Figure_1_Machine.png)
+![Rendering of OSHE Pick-and-Place machine](images/Figure_1_Machine.png)
 
----
+*Figure 1: Rendering of OSHE Pick-and-Place machine.*
+
+# Mechanical Interface
 
 ## Interface Plate
 
@@ -49,41 +51,51 @@ The overall mounting dimensions are based on the existing Pick-and-Place design.
 
 All dimensions shown in the following figures are in millimeters (mm).
 
-![Figure 2: Overall dimensions of the Interface Plate](images/Figure_2_interface_plate.png)
+![Overall dimensions and views of the Interface Plate](images/Figure_2_interface_plate.png)
 
-![Figure 3: Interface Plate rail mounting features](images/Figure_3_interface_plate_rail_mount.png)
+*Figure 2: Overall dimensions and views of the Interface Plate.*
+
+![Interface Plate profile](images/Figure_3_interface_plate_profile.png)
+
+*Figure 3: Interface Plate profile and dimensions.*
 
 Figure 2 and Figure 3 show the overall dimensions and profile of the Interface Plate.
 
-### Z-Axis Mounting Interface
+## Z-Axis Mounting Interface
 
 The side of the Interface Plate that attaches to the Z-axis rail must maintain the existing Pick-and-Place mounting geometry. This allows the plate to fit onto the existing gantry without requiring changes to the Z-axis assembly.
 
-![Figure 4: Dimensions of the side that mounts to the Z-axis rail](images/Figure_4_interface_plate_mount_holes.png)
+![Interface Plate Z-axis rail mounting interface](images/Figure_4_z_axis_rail_mount.png)
+
+*Figure 4: Dimensions of the side that mounts to the Z-axis rail.*
 
 The four mounting holes use M2 screws from the existing Pick-and-Place design. The groove that interfaces with the Z-axis rail must also remain unchanged to ensure proper alignment and attachment.
 
-### Mounting Holes and Belt Attachment
+## Mounting Holes and Belt Attachment
 
 The Interface Plate includes mounting holes and a heat-set insert location for attaching the Toolhead Template.
 
-![Figure 5: Cutout used by the belt attachment system](images/Figure_5_interface_place_notch.png)
+![Interface Plate mounting holes and heat-set insert location](images/Figure_5_mounting_holes_heat_set_insert.png)
+
+*Figure 5: Locations and dimensions of the mounting holes and heat-set insert hole.*
 
 Figure 5 shows the locations and dimensions of the mounting holes and heat-set insert hole. The heat-set insert is designed for an M3 screw. The current design uses an insert approximately 4.55 mm in diameter and 5.7 mm long. The exact insert model should be verified when selecting the hardware.
 
-The Interface Plate also includes features for attaching to the Z-axis belt. These features are part of the existing Pick-and-Place mounting system and allow the belt to control the vertical movement of the toolhead.
-
-![Figure 6: Interface Plate rest](images/Figure_6_interface_plate_rest.png)
-
 The four M2 mounting holes, Z-axis rail groove, and belt attachment grooves and mounting features are required parts of the standardized mechanical interface. These features must not be changed when designing a compatible Interface Plate. Maintaining these dimensions allows the plate to attach to the existing gantry and use the machine's existing Z-axis drive system.
 
----
+The Interface Plate also includes features for attaching to the Z-axis belt. These features are part of the existing Pick-and-Place mounting system and allow the belt to control the vertical movement of the toolhead.
+
+![Interface Plate rest](images/Figure_6_interface_plate_rest.png)
+
+*Figure 6: Interface Plate rest.*
 
 ## Toolhead Template
 
 The Toolhead Template provides a standardized starting point for designing interchangeable toolheads. It is designed to attach to the Interface Plate while providing a consistent mounting arrangement for different toolhead designs.
 
-![Figure 7: Dimensions and mounting features of the Toolhead Template](images/Figure_7_toolhead_template.png)
+![Toolhead Template dimensions and mounting features](images/Figure_7_toolhead_template.png)
+
+*Figure 7: Dimensions and mounting features of the Toolhead Template.*
 
 The template is 4 mm thick and is designed to be simple so that it can be incorporated into many different toolhead designs. Its mounting geometry must remain compatible with the Interface Plate. The locations of the mounting features and the geometry that contacts the Interface Plate must remain aligned.
 
@@ -138,21 +150,25 @@ When selecting a material, designers should consider the strength, stiffness, te
 
 The pen plotter is an example of how the Toolhead Template can be modified to create a toolhead for a specific application.
 
-![Figure 8: Pen plotter toolhead](images/Figure_8_pen_plotter_toolhead.png)
+![Completed pen plotter toolhead](images/Figure_8_pen_plotter_toolhead.png)
+
+*Figure 8: The completed pen plotter toolhead.*
 
 To create it, the Toolhead Template was used as the starting point, and additional material was extruded to create a section that holds a pen.
 
 A hole was then added to allow the pen to slide into the toolhead. Figure 9 shows the dimensions of this opening.
 
-![Figure 9: Pen plotter toolhead pen hole](images/Figure_9_pen_plotter_toolhead_pen_hole.png)
+![Pen opening dimensions](images/Figure_9_pen_hole.png)
+
+*Figure 9: Dimensions of the pen opening in the pen plotter toolhead.*
 
 Additional holes were added for the M3 screws and heat-set inserts used to secure the pen. The screws used to hold the pen are approximately 23 mm long, measured from end to end. The screws used to attach the toolhead to the Interface Plate are approximately 15 mm long. Both use an Allen wrench. The finished design includes fillets to improve the appearance of the toolhead.
 
-![Figure 10: Pen plotter toolhead screw holes](images/Figure_10_pen_plotter_toolhead_screw_holes.png)
+![Pen plotter toolhead screw holes](images/Figure_10_pen_plotter_screw_holes.png)
+
+*Figure 10: Screw holes used to secure the pen holder and attach the toolhead.*
 
 This example demonstrates how the standardized Toolhead Template can be modified to support different applications while maintaining compatibility with the existing mounting interface.
-
----
 
 # Electrical Interface
 
@@ -287,6 +303,8 @@ The completed table should identify the electrical resources needed by the toolh
 
 The Octopus Pro pinout diagram in Figure 11 provides a reference for identifying the board's connections. The pinout diagram shown is for the Octopus Pro V1.1. There is currently no single required electrical configuration for all toolheads. Each toolhead designer is responsible for selecting compatible components and documenting the connections required for their design. The wiring should be reviewed before connecting the toolhead to the machine to ensure that all voltage, current, and signal requirements are satisfied.
 
-![Figure 11: BIGTREETECH Octopus Pro V1.1 pinout](images/Figure_11_BIGTREETECH_Octopus_Pro_V1.1_Pin.jpg)
+![BIGTREETECH Octopus Pro V1.1 pinout diagram](images/Figure_11_octopus_pro_v1_1_pinout.png)
 
-**Source:** [BIGTREETECH Octopus Pro GitHub repository](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro).
+*Figure 11: BIGTREETECH Octopus Pro V1.1 pinout diagram.*
+
+Source: [BIGTREETECH Octopus Pro GitHub repository](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro).
