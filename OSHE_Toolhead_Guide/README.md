@@ -132,6 +132,34 @@ Toolheads will typically be oriented downward toward the work surface, but the d
 
 Additional mounting features can also be included for sensors or other electronic components. These features should be positioned according to the requirements of the specific toolhead.
 
+## Toolhead Positional Calibration
+
+Each interchangeable toolhead must be calibrated to ensure that its working tip is positioned accurately relative to the existing Pick-and-Place machine.
+
+The original PnP nozzle serves as the reference point. The machine's existing camera calibration and positioning system remain unchanged. Any positional differences introduced by a replacement toolhead are measured and recorded separately.
+
+### Measuring Toolhead Offsets
+
+1. Home and reference the machine using the existing PnP procedure.
+2. Position the original nozzle directly over a fixed reference mark and record its X and Y coordinates.
+3. Install the replacement toolhead and re-establish the same machine reference.
+4. Carefully position the replacement tool's working tip over the same mark and record its coordinates.
+5. Calculate the required coordinate corrections:
+
+   - X correction = New toolhead X − Original nozzle X
+   - Y correction = New toolhead Y − Original nozzle Y
+
+6. Measure the replacement toolhead's working Z height separately.
+7. Repeat the measurements at least three times to evaluate consistency.
+
+### Verification
+
+Apply the measured corrections during a controlled positioning test. The replacement toolhead should reach the intended target without requiring changes to the original PnP calibration.
+
+Document the final X, Y, and Z calibration values for each toolhead, along with the measurement conditions and observed positioning variation.
+
+All calibration procedures should initially be performed at reduced movement speeds with sufficient clearance to prevent collisions.
+
 ## Clearance and Toolhead Movement
 
 When designing a custom toolhead, enough clearance must be maintained between the toolhead and the surrounding machine components. The toolhead should be checked throughout the full range of gantry and Z-axis movement to make sure it does not collide with the frame, work surface, wiring, or other machine components.
